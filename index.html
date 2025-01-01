@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <script>
+        
+
+        const main = [1,2,3]
+        const page = document.querySelector(".main")
+        main.map((item,index)=>{
+            const aaa = document.createElement("div")
+            aaa.innerHTML=`
+          
+            `
+            page.appendChild(aaa)
+        })
+       
+    </script>
+</body>
+</html>

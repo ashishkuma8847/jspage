@@ -1,36 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-        }
+      * {
+        margin: 0;
+      }
+      .container {
+        font-family: "Courier New", Courier, monospace;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: linear-gradient(
+          to right,
+          rgb(146, 227, 146),
+          rgb(66, 66, 244),
+          rgb(221, 95, 221)
+        );
+      }
+      .mainhead {
+        background-color: white;
+        width: 350px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .h41 {
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10px;
+        width: 80px;
+        text-align: center;
+        font-size: small;
+        padding: 5px;
+        background-color: rgb(22, 189, 255);
+        color: white;
+        border-radius: 30px;
+      }
+      .h42 {
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10px;
+        font-size: large;
+      }
+      .p1 {
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 10px;
+      }
+      .bottom-part {
+        margin: 30px 0 0 10px;
+        display: flex;
+        padding-bottom: 20px;
+        gap: 5px;
+      }
+      .bottom-part2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .bottomh3 {
+        font-size: medium;
+        font-weight: 500;
+      }
+      .bottomp1 {
+        font-size: small;
+        font-weight: 300;
+        color: gray;
+      }
     </style>
-</head>
-<body>
-    <img src="" alt="">
-    <div class="main"></div>
-    <script>
-        
-
-        const main = [1,2,3]
-        const page = document.querySelector(".main")
-        main.map((item,index)=>{
-            const aaa = document.createElement("div")
-            aaa.innerHTML=`
-    <img src="./twitter.png" alt="">
-                
-            `
-            page.appendChild(aaa)
-        })
-        
-
-
-        // add event listener to hover or other efeccts 
-       
-    </script>
-</body>
+  </head>
+  <body>
+    <div class="container">
+        <!-- <img class="img1" src="./Capture1.PNG" alt="" />
+        <h4 class="h41">Technology</h4>
+        <h2 class="h42">What's Is New In 2022 Tech</h2>
+        <p class="p1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus at
+          iusto molestias a nesciunt qui necessitatibus expedita eum odio
+          libero!
+        </p>
+        <div class="bottom-part">
+          <img class="img2" src="./Capture4.PNG" alt="" />
+          <div class="bottom-part2">
+            <h3 class="bottomh3">Jane Doe</h3>
+            <p class="bottomp1">2h ago</p>
+          </div>
+        </div> -->
+    </div>
+  </body>
+  <script>
+    let ahead = [
+      {
+        img1: "./Capture1.PNG",
+        h41: "Technology",
+        h42: "What's Is New In 2022 Tech",
+        img2: "./Capture4.PNG",
+        bottomh3: "Jane Doe",
+        bottomp1: "2h ago",
+      },
+      {
+        img1: "./Capture2.PNG",
+        h41: "Food",
+        h42: "Delicius Food",
+        im2: "./Capture5.PNG",
+        bottomh3: "Jany Doe",
+        bottomp1: "Yesterday",
+      },
+      {
+        img1: "./Capture3.PNG",
+        h41: "Automobile",
+        h42: "Race To Your Heart Content",
+        img2: "./Capture6.PNG",
+        bottomh3: "Jahn Doe",
+        bottomp1: "2d ago",
+      },
+    ];
+const container = document.querySelector("container")
+    ahead.map((items, index) => {
+      const div = document.createElement("div");
+      div.className = "mainhead";
+      div.innerHTML=`
+      <img class="img1" src=" ${img1} " alt="" />
+        <h4 class="h41"> ${h41} </h4>
+        <h2 class="h42"> ${h42} </h2>
+        <p class="p1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus at
+          iusto molestias a nesciunt qui necessitatibus expedita eum odio
+          libero!
+        </p>
+        <div class="bottom-part">
+          <img class="img2" src=" ${img2} " alt="" />
+          <div class="bottom-part2">
+            <h3 class="bottomh3"> ${bottomh3} </h3>
+            <p class="bottomp1"> ${bottomp1} </p>
+          </div>
+        </div>
+      `
+      container.appendChild(div)
+    });
+  </script>
 </html>

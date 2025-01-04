@@ -24,6 +24,7 @@
         );
       }
       .mainhead {
+      margin: 0 auto;
         background-color: white;
         width: 350px;
         border: none;
@@ -44,6 +45,7 @@
         color: white;
         border-radius: 30px;
       }
+    
       .h42 {
         font-family: "Courier New", Courier, monospace;
         margin-left: 10px;
@@ -95,7 +97,7 @@
     </div>
   </body>
   <script>
-    let ahead = [
+    const ahead = [
       {
         img1: "./Capture1.PNG",
         h41: "Technology",
@@ -121,27 +123,28 @@
         bottomp1: "2d ago",
       },
     ];
-const container = document.querySelector("container")
+ const container = document.querySelector(".container")
     ahead.map((items, index) => {
       const div = document.createElement("div");
       div.className = "mainhead";
       div.innerHTML=`
-      <img class="img1" src=" ${img1} " alt="" />
-        <h4 class="h41"> ${h41} </h4>
-        <h2 class="h42"> ${h42} </h2>
+      <img class="img1" src=" ${items.img1} " alt="" />
+        <h4 class="h41"> ${items.h41} </h4>
+        <h2 class="h42"> ${items.h42} </h2>
         <p class="p1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus at
           iusto molestias a nesciunt qui necessitatibus expedita eum odio
           libero!
         </p>
         <div class="bottom-part">
-          <img class="img2" src=" ${img2} " alt="" />
+          <img class="img2" src=" ${items.img2} " alt="" />
           <div class="bottom-part2">
-            <h3 class="bottomh3"> ${bottomh3} </h3>
-            <p class="bottomp1"> ${bottomp1} </p>
+            <h3 class="bottomh3"> ${items.bottomh3} </h3>
+            <p class="bottomp1"> ${items.bottomp1} </p>
           </div>
         </div>
       `
+     
       container.appendChild(div)
     });
   </script>

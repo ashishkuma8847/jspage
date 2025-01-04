@@ -41,7 +41,6 @@
         text-align: center;
         font-size: small;
         padding: 5px;
-        background-color: rgb(22, 189, 255);
         color: white;
         border-radius: 30px;
       }
@@ -105,6 +104,7 @@
         img2: "./Capture4.PNG",
         bottomh3: "Jane Doe",
         bottomp1: "2h ago",
+        color:"rgb(150, 50, 255)",
       },
       {
         img1: "./Capture2.PNG",
@@ -113,6 +113,8 @@
         im2: "./Capture5.PNG",
         bottomh3: "Jany Doe",
         bottomp1: "Yesterday",
+        color:"rgb(150, 50, 255)",
+
       },
       {
         img1: "./Capture3.PNG",
@@ -121,6 +123,7 @@
         img2: "./Capture6.PNG",
         bottomh3: "Jahn Doe",
         bottomp1: "2d ago",
+        color:"rgb(150, 50, 255)",
       },
     ];
  const container = document.querySelector(".container")
@@ -129,7 +132,8 @@
       div.className = "mainhead";
       div.innerHTML=`
       <img class="img1" src=" ${items.img1} " alt="" />
-        <h4 class="h41"> ${items.h41} </h4>
+        
+        <h4 class="h41" style="background:${items.color};"> ${items.h41} </h4>
         <h2 class="h42"> ${items.h42} </h2>
         <p class="p1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus at
